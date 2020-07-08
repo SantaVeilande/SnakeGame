@@ -18,8 +18,8 @@ namespace SnakeGame
         private void InitializeArea()
         {
             this.BackColor = Color.LightSteelBlue;
-            this.Height = 200;
-            this.Width = 200;
+            this.Height = 400;
+            this.Width = 400;
 
         }
     }
