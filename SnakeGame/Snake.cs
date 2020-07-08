@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,6 +22,7 @@ namespace SnakeGame
             PictureBox snakePixel = new PictureBox();
             snakePixel.Height = 20;
             snakePixel.Width = 20;
+            snakePixel.BackColor = Color.Red;
             snakePixels.Add(snakePixel);
         }
     }
