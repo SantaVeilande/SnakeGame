@@ -22,7 +22,13 @@ namespace SnakeGame
 
         private void InitializeGame()
         {
+            this.Height = 600;
+            this.Width = 600; 
+
             this.Controls.Add(area);
+            area.Top = 100;
+            area.Left = 100; // vai šādi area.Location = new Point(100, 100);
+
         }
     }
 }
