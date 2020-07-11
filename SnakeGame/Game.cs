@@ -12,14 +12,33 @@ namespace SnakeGame
 {
     public partial class Game : Form
     {
+        int horVelocity = 0; //horizontal
+        int verVelocity = 0; // vertical
+        int step = 20; // 20 tāpēc, ka viens pikselis ir 20 mūsu gadījumā
+
         Area area = new Area();
         Snake snake = new Snake();
+        Timer mainTimer = new Timer();
       
 
         public Game()
         {
             InitializeComponent();
             InitializeGame();
+            InitializeTimer();
+
+        }
+
+        private void InitializeTimer()
+        {
+            mainTimer.Interval = 500;
+            mainTimer.Tick += new EventHandler(MainTimer_Tick);
+            mainTimer.Start();
+        }
+
+        private void MainTimer_Tick(object sender, EventArgs e)
+        {
+
         }
 
         private void InitializeGame()
@@ -31,7 +50,7 @@ namespace SnakeGame
             area.Top = 100;
             area.Left = 100; // vai šādi area.Location = new Point(100, 100);
 
-            // adding snake body ? class Snake : List<PictureBox>
+            // adding snake body 
             snake.Render(this);
         }
 
