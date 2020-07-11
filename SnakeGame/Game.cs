@@ -32,6 +32,7 @@ namespace SnakeGame
             area.Left = 100; // vai šādi area.Location = new Point(100, 100);
 
             // adding snake body ? class Snake : List<PictureBox>
+            snake.Render(this);
         }
 
 
